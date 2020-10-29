@@ -28,8 +28,8 @@ btn_Off = tk.Button(root, text="Turn Off", command=turnOffLED)
 btn_Off.grid(row=0, column=1)
 
 blinkState = IntVar()
-ChkBtn_Blink = tk.Checkbutton(root, text = "Blink",variable = blinkState, command = blinkLED)
-ChkBtn_Blink.grid(row=0, column = 2)
+chkBtn_Blink = tk.Checkbutton(root, text = "Blink",variable = blinkState, command = blinkLED)
+chkBtn_Blink.grid(row=0, column = 2)
 
 root.geometry("350x350")
 root.mainloop()
