@@ -23,7 +23,6 @@ def blinkLED():
         time.sleep(1)
         delay = userDelay.get()
         ser.write(delay.encode())
-        #print(delay)
         
 # creating tkinter window 
 root = Tk() 
