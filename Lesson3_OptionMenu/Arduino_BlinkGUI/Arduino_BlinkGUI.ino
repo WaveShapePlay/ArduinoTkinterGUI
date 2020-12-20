@@ -32,9 +32,6 @@ if(Serial.available()> 0){
       }
       if(userInput == 'b'){
         int delayTime = getDelayTime();
-        String delayTimePrint = String(delayTime);
-        //Serial.println("The time recived was: ");
-        //Serial.println(delayTimePrint);
         for(int i =0;i<10;i++){
           digitalWrite(LED_BUILTIN,LOW);
           delay(delayTime);
