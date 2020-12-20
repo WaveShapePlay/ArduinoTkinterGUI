@@ -7,12 +7,10 @@ void setup(){
 }
 
 int getDelayTime(){
-  //Serial.print("In the delay time fuction");
   String blinkTimeString;
   int blinkTimeInt = 0;
   delay(2000); // Need to wait for pyserial send time 
   blinkTimeString = Serial.readString();
-  //Serial.println(blinkTimeString);
   blinkTimeInt = blinkTimeString.toInt();
   return blinkTimeInt;
 } // Get Delay Time function
