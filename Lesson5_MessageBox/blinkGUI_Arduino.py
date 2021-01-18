@@ -31,7 +31,7 @@ def userDataCheck(userInput):
     try:
         int(userInput)
     except:
-        messagebox.showerror("Error", "Please enter a vaild interger",icon = 'error')
+        messagebox.showerror("Error", "Please enter a valid integer",icon = 'error')
         
 # creating tkinter window 
 root = Tk() 
