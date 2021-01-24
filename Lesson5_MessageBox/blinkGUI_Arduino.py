@@ -23,24 +23,22 @@ def blinkLED():
         time.sleep(1)
         delay = userDelay.get()
         numBlinks = entryBlink.get()
-        userDataCheck(numBlinks)
-        dataToSend = delay + '-' + numBlinks
-        ser.write(dataToSend.encode())
+        userInputVaild = userDataCheck(numBlinks)
+        if userInputVaild == True:
+            dataToSend = delay + '-' + numBlinks
+            ser.write(dataToSend.encode())
 
 def userDataCheck(userInput):
     try:
         int(userInput)
+        return True
     except:
-        messagebox.showerror("Error", "Please enter a valid integer",icon = 'error')
-        
+        messagebox.showerror("Error", "Please enter a valid integer", icon = 'error')
+        return False
+    
 # creating tkinter window 
 root = Tk() 
 root.title('Blink GUI')
-### Test ####
-### https://bugs.python.org/issue15189
-icon = tk.PhotoImage(file="bannerLogo.PNG")
-root.tk.call("wm", "iconphoto", root, "-default", icon)
-#####
 
 btn_On = tk.Button(root, text="Turn On", command=turnOnLED)
 btn_On.grid(row=0, column=0)
