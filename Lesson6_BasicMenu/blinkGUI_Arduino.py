@@ -86,10 +86,10 @@ entryBlink.grid(row=2,column = 1)
 
 menuBar = Menu(root)
 
-file = Menu(menuBar,tearoff = 0)
-menuBar.add_cascade(label ='File', menu = file)  
-file.add_command(label ='Save', command = menuSave)
-file.add_command(label ='Exit', command = exitGUI)
+fileMenu = Menu(menuBar,tearoff = 0)
+menuBar.add_cascade(label ='File', menu = fileMenu)  
+fileMenu.add_command(label ='Save', command = menuSave)
+fileMenu.add_command(label ='Exit', command = exitGUI)
 
 settings = Menu(menuBar, tearoff = 0)
 menuBar.add_cascade(label ='Settings', menu = settings) 
