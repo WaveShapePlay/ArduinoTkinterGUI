@@ -43,7 +43,6 @@ def menuBlinkEnable():
 def menuDelaySelect(index):
     if blinkState.get() == 0:
         blinkState.set(1)
-    #print(index)
     userDelay.set(blinkTime[index])
 
 def menuTurnOn():
