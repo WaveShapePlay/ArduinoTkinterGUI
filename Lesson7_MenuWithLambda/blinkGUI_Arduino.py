@@ -106,7 +106,7 @@ settings.add_command(label ='Turn Off', command = menuTurnOff)
 delaySubMenu = Menu(settings, tearoff = 0)
 settings.add_cascade(label ='Delay', menu = delaySubMenu)
 for i in range(0,len(blinkTime)):
-    delaySubMenu.add_command(label = blinkTime[i], command = lambda i=i : menuDelaySelect(i))
+    delaySubMenu.add_command(label = blinkTime[i], command = (lambda i=i : menuDelaySelect(i)))
 
 root.config(menu = menuBar)
 root.geometry("350x350")
